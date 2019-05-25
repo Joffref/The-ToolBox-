@@ -9,7 +9,7 @@ from global_variable import titlescreen, webkit_menu, github_menu #menus import
 from txt_handler import txt_file #import of txt_file
 from open_project import open_project #import of open_project - WIP
 from GitHub_handler import *
-from Ngtok_handler import ngrok
+from Ngrok_handler import ngrok
 import os #import os to make some commands
 
 def main_program(): #main 
