@@ -26,7 +26,6 @@ def webkit(): #create the webkit fct
         try:
             path = str(args.output) + "\\" + str(args.title)
             os.mkdir(path)
-
         except OSError:
             print ("Creation of the directory %s failed" % path)
         else:  
