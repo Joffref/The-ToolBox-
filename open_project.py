@@ -3,7 +3,7 @@ Project : The ToolBox
 Module : open_project
 Version : 0.1
 Author : Mathis JOFFRE
-Last update : 24/05/2019
+Last update : 25/05/2019
 '''
 import subprocess
 from WEBKIT import WebKitConfig
@@ -19,11 +19,8 @@ def open_project():
         print (" YOU ARE SUCH STUPID DUDE ! ")
 
     if open_project_choice == 1:
-        try:
-            open_project_path = str(input("PATH (C:\\test\\ect) :"))
-        except ValueError:
-            print (" YOU ARE SUCH STUPID DUDE ! ")
-
+        
+        open_project_path = input("PATH (C:\\test\\ect) :")
         subprocess.Popen((WebKitConfig.editor_path, open_project_path))
         
 
