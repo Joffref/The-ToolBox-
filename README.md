@@ -15,7 +15,8 @@ An automated tool in the aim to make the dev life easier.
         3. OPEN YOUR EDITOR (Open projects...)
         4. GITHUB 
         5. START A NGROK SERVER
-        6. QUIT
+        6. STACKOVERFLOW SOLUTION
+        7. QUIT
 ```
 
 ## Getting Started
