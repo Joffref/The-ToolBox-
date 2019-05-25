@@ -14,6 +14,7 @@ titlescreen = """
         3. OPEN YOUR EDITOR (Open projects...)
         4. GITHUB 
         5. START A NGROK SERVER
+        6. QUIT 
 
 """
 
