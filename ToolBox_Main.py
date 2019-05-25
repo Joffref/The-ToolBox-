@@ -7,9 +7,10 @@ Last update : 25/05/2019
 '''
 from global_variable import titlescreen, webkit_menu, github_menu #menus import 
 from txt_handler import txt_file #import of txt_file
-from open_project import open_project #import of open_project - WIP
+from open_project import open_project #import of open_project 
 from GitHub_handler import *
 from Ngrok_handler import ngrok
+from StackOverflow import stackoverflow_question
 from os import system #import os to make some commands
 
 def main_program(): #main 
@@ -77,15 +78,15 @@ def main_program(): #main
             except ValueError:
                 print (" YOU ARE SUCH STUPID DUDE ! ")
             ngrok(port)
-        
+
         if main_choice == 6:
+            article = input('WHAT IS YOUR PROBLEM : ')
+            stackoverflow_question(article)
+
+        if main_choice == 7:
             print('SEE YOU LATER !')
             continuer = False
 
         
-
-        
-        
-
 if __name__ == '__main__':
     main_program()

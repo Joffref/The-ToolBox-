@@ -10,18 +10,18 @@ from WEBKIT import WebKitConfig
 from global_variable import open_project_menu
 
 def open_project():
-
     print (open_project_menu)
-
     try:
         open_project_choice = int(input("WHAT DO YOU WANT :"))
     except ValueError:
         print (" YOU ARE SUCH STUPID DUDE ! ")
 
     if open_project_choice == 1:
-        
         open_project_path = input("PATH (C:\\test\\ect) :")
-        subprocess.Popen((WebKitConfig.editor_path, open_project_path))
+        try:
+            subprocess.Popen((WebKitConfig.editor_path, open_project_path))
+        except subprocess.CalledProcessError:
+            print ('YOU MUST CONFIGURE WebKitConfig.py IN WEBKIT FOLDER')
         
 
     if open_project_choice == 2:

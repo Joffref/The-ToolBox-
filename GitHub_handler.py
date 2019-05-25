@@ -1,3 +1,10 @@
+'''
+Project : The ToolBox
+Module : GitHub 
+Version : 0.1
+Author : Mathis JOFFRE
+Last update : 25/05/2019
+'''
 from os import system 
 
 def github_push(documents, subtitles):
@@ -9,6 +16,4 @@ def github_push(documents, subtitles):
 def github_fetch(names):
     for name in names:
         system('git fetch ' + name)
-    
-
-        
+ 
