@@ -48,7 +48,7 @@ See also the list of [contributors](https://github.com/Joffref/The-ToolBox-/grap
 
 -Gaphic interface
 
--Enchanced modules 
+-Enchance modules 
 
 -To continue...
 
