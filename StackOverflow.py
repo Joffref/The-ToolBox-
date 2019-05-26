@@ -4,11 +4,22 @@ import webbrowser
 
 def stackoverflow_question(article_title):
 
+    continuer = True
+    i = 0
     article_title_1 = article_title.replace(' ', '%20')
     url = 'https://api.stackexchange.com/2.2/similar?order=asc&sort=relevance&title=' + article_title_1 + '&site=stackoverflow'
     reponse = requests.get(url).json()
-    formated_reponse = reponse['items'][0]['accepted_answer_id']
 
+    while continuer:
+        i =+ 1
+        try:
+            formated_reponse = reponse['items'][i]['accepted_answer_id']
+        except KeyError:
+            continue   
+
+        if len(str(formated_reponse)) != 0:
+            continuer = False
+        
     url_answer = 'https://api.stackexchange.com/2.2/posts/'+ str(formated_reponse) +'?order=desc&sort=activity&site=stackoverflow'
     reponse_answer = requests.get(url_answer).json()
     formated_reponse_answer = reponse_answer['items'][0]['link']
