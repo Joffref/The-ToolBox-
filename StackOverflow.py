@@ -11,7 +11,7 @@ def stackoverflow_question(article_title):
     reponse = requests.get(url).json()
 
     while continuer:
-        i =+ 1
+        i += 1
         try:
             formated_reponse = reponse['items'][i]['accepted_answer_id']
         except KeyError:
@@ -19,6 +19,10 @@ def stackoverflow_question(article_title):
 
         if len(str(formated_reponse)) != 0:
             continuer = False
+
+        if i > len(reponse['items']):
+            print('TRY ANOTHER KEYWORDS')
+            continuer = False 
         
     url_answer = 'https://api.stackexchange.com/2.2/posts/'+ str(formated_reponse) +'?order=desc&sort=activity&site=stackoverflow'
     reponse_answer = requests.get(url_answer).json()
