@@ -24,12 +24,12 @@ def open_project():
             print ('YOU MUST CONFIGURE WebKitConfig.py IN WEBKIT FOLDER')
         
 
-    if open_project_choice == 2:
+    elif open_project_choice == 2:
         try:
             subprocess.Popen((WebKitConfig.editor_path))
         except subprocess.CalledProcessError:
             print ('YOU MUST CONFIGURE WebKitConfig.py IN WEBKIT FOLDER')
     
-    if open_project_choice != 1 and open_project_choice != 2:
+    else:
         print('INVALID ARGUMENT')
         

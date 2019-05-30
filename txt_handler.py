@@ -24,12 +24,12 @@ def txt_file(): #create the fct
         txt_document = open(txt_location + txt_name + ".txt", 'w+' )
         txt_document.close()
 
-    if txt_choice == 2: #write in a txt file (automatic launch of the used prog. )   
+    elif txt_choice == 2: #write in a txt file (automatic launch of the used prog. )   
         txt_location = input("Path to write the file (write nothing to write it in the current one): ") 
         txt_name = input("Name of the file you want to write : ")      
         os.startfile( txt_location + txt_name + '.txt')
 
-    if txt_choice == 3: #read a file    
+    elif txt_choice == 3: #read a file    
         txt_location = input("Path to read the file (write nothing to read it in the current one): ")    
         txt_name = input("Name of the file you want to read : ") 
         txt_document = open(txt_location + txt_name + ".txt", 'r' )
@@ -49,5 +49,5 @@ def txt_file(): #create the fct
         else:
             pass
     
-    if txt_choice != 1 and txt_choice != 2 and txt_choice !=3: #verification of user choice 
+    else:
         print('Damn')
